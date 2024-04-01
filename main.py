@@ -20,6 +20,7 @@ class Animal():
 
     def make_sound(self):
         pass
+
     def eat(self):
         pass
 
@@ -27,8 +28,10 @@ class Bird(Animal):
     def __init__(self, name, age, color):
         super().__init__(name, age)
         self.color = color
+
     def fly(self):
         print(f"{self.name} летает")
+
     def make_sound(self):
         print(f"{self.name} щебечет")
 
@@ -39,8 +42,10 @@ class Mammal(Animal):
 
     def hunting(self):
         print(f"{self.name} охотится")
+
     def make_sound(self):
         print(f"{self.name} рычит")
+
 class Reptile(Animal):
     def __init__(self, name, age, venomous):
         super().__init__(name, age)
@@ -52,6 +57,7 @@ class Reptile(Animal):
     def make_sound(self):
         print(f'{self.name} шипит')
 
+
 def animal_sound(animals):
     for animal in animals:
         animal.make_sound()
@@ -61,16 +67,20 @@ class Zookeeper():
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
     def feed_animal(self):
         print(f"{self.name} кормит животных")
+
 
 class Veterinarian():
     def __init__(self, name, age, specialization):
         self.name = name
         self.age = age
         self.specialization = specialization
+
     def heal_animal(self):
         print(f"{self.name} лечит животных")
+
 class Zoo():
     def __init__(self):
         self.animals = []
@@ -81,3 +91,13 @@ class Zoo():
 
     def add_stuff(self, stuff):
         self.stuff.append(stuff)
+
+
+bird1 = Bird("Чижик", "3", "серый")
+bird1.fly()
+mammal1 = Mammal("Волк", "2", "хищник")
+reptile1 = Reptile("Гадюка", "2", 'ядовитая')
+
+
+animals = [bird1, mammal1, reptile1]
+animal_sound(animals)
