@@ -13,3 +13,17 @@
 #Дополнительно:
 #Попробуйте добавить дополнительные функции в вашу программу, такие как сохранение информации о зоопарке в файл и возможность её загрузки, чтобы у вашего зоопарка было "постоянное состояние" между запусками программы.
 
+class Animal():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def make_sound(self):
+        pass
+    def eat(self):
+        pass
+
+class Bird(Animal):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+        
